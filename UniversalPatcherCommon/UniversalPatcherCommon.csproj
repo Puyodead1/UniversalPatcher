@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\External\7zip\Common\CommandLineParser.cs" Link="7zip\CommandLineParser.cs" />
+    <Compile Include="..\External\7zip\Common\CRC.cs" Link="7zip\CRC.cs" />
+    <Compile Include="..\External\7zip\Common\InBuffer.cs" Link="7zip\InBuffer.cs" />
+    <Compile Include="..\External\7zip\Common\OutBuffer.cs" Link="7zip\OutBuffer.cs" />
+    <Compile Include="..\External\7zip\Compress\LzmaAlone\LzmaBench.cs" Link="7zip\LzmaBench.cs" />
+    <Compile Include="..\External\7zip\Compress\LZMA\LzmaBase.cs" Link="7zip\LzmaBase.cs" />
+    <Compile Include="..\External\7zip\Compress\LZMA\LzmaDecoder.cs" Link="7zip\LzmaDecoder.cs" />
+    <Compile Include="..\External\7zip\Compress\LZMA\LzmaEncoder.cs" Link="7zip\LzmaEncoder.cs" />
+    <Compile Include="..\External\7zip\Compress\LZ\IMatchFinder.cs" Link="7zip\IMatchFinder.cs" />
+    <Compile Include="..\External\7zip\Compress\LZ\LzBinTree.cs" Link="7zip\LzBinTree.cs" />
+    <Compile Include="..\External\7zip\Compress\LZ\LzInWindow.cs" Link="7zip\LzInWindow.cs" />
+    <Compile Include="..\External\7zip\Compress\LZ\LzOutWindow.cs" Link="7zip\LzOutWindow.cs" />
+    <Compile Include="..\External\7zip\Compress\RangeCoder\RangeCoder.cs" Link="7zip\RangeCoder.cs" />
+    <Compile Include="..\External\7zip\Compress\RangeCoder\RangeCoderBit.cs" Link="7zip\RangeCoderBit.cs" />
+    <Compile Include="..\External\7zip\Compress\RangeCoder\RangeCoderBitTree.cs" Link="7zip\RangeCoderBitTree.cs" />
+    <Compile Include="..\External\7zip\ICoder.cs" Link="7zip\ICoder.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="7zip\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Octopus.Octodiff" Version="2.0.326" />
+    <PackageReference Include="SharpZipLib" Version="1.4.2" />
+  </ItemGroup>
+
+</Project>

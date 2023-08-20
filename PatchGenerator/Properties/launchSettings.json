@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "PatchGenerator": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:\\Users\\23562\\Downloads\\Astro110\" \"C:\\Users\\23562\\Downloads\\Astro111\" \"C:\\Users\\23562\\Downloads\\PatchData\""
+    }
+  }
+}

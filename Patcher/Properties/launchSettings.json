@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "Patcher": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:\\Users\\23562\\Downloads\\AstroPatcherTest\\AstroInstall\"",
+      "workingDirectory": "C:\\Users\\23562\\Downloads\\AstroPatcherTest\\Patcher"
+    }
+  }
+}
