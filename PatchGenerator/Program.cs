@@ -31,6 +31,7 @@ namespace PatchGenerator
             var newDirPath = new Argument<string?>(
                 name: "new",
                 description: "Path to new version");
+
             var outDirPath = new Argument<string?>(
                 name: "out",
                 description: "Path to output patch files");
