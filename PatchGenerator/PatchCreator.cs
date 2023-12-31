@@ -185,6 +185,7 @@ namespace PatchGenerator
                 if (!oldFileExists)
                 {
                     Console.WriteLine($"Found New File: {newFileRelativePath}");
+                    Directory.CreateDirectory(Path.Combine(patchDataPath, relativePath));
                     ZipUtils.CompressFile(targetFile.FullName, diffFileCompressed, true);
                     var patchFile = new PatchFile
                     {
