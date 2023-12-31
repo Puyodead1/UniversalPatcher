@@ -180,12 +180,12 @@ namespace PatchGenerator
                 var diffFileTemp = Path.Combine(patchDataPath, newFileRelativePath + Constants.PATCH_FILE_TEMP_SUFFIX);
                 var diffFileCompressed = Path.Combine(patchDataPath, newFileRelativePath + Constants.PATCH_FILE_SUFFIX);
 
+                Directory.CreateDirectory(Path.Combine(patchDataPath, relativePath));
                 bool oldFileExists = File.Exists(oldFileAbsolutePath);
 
                 if (!oldFileExists)
                 {
                     Console.WriteLine($"Found New File: {newFileRelativePath}");
-                    Directory.CreateDirectory(Path.Combine(patchDataPath, relativePath));
                     ZipUtils.CompressFile(targetFile.FullName, diffFileCompressed, true);
                     var patchFile = new PatchFile
                     {
