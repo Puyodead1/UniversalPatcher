@@ -95,9 +95,11 @@ namespace PatchGenerator
                 using (var newFileStream = new FileStream(targetPath, FileMode.Open, FileAccess.Read, FileShare.Read))
                 using (var deltaStream = new FileStream(deltaPath, FileMode.Create, FileAccess.Write, FileShare.Read))
                 {
-                    //IProgressReporter reporter = new ConsoleProgressReporter();
-                    IProgressReporter reporter = new NullProgressReporter();
-                    new DeltaBuilder().BuildDelta(newFileStream, new SignatureReader(signatureStream, reporter), new AggregateCopyOperationsDecorator(new BinaryDeltaWriter(deltaStream)));
+                    IProgressReporter reporter = new ConsoleProgressReporter();
+                    //IProgressReporter reporter = new NullProgressReporter();
+                    var builder = new DeltaBuilder();
+                    builder.ProgressReporter = reporter;
+                    builder.BuildDelta(newFileStream, new SignatureReader(signatureStream, reporter), new AggregateCopyOperationsDecorator(new BinaryDeltaWriter(deltaStream)));
                 }
             }
         }
