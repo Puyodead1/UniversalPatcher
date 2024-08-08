@@ -106,6 +106,9 @@ namespace Patcher
                     return 1;
                 }
 
+                // ensure the parent directory exists
+                Directory.CreateDirectory(Path.GetDirectoryName(decompressedPath.FullName)!);
+
                 // decompress and copy
                 ZipUtils.DecompressFile(compressedPath.FullName, decompressedPath.FullName, true);
 
